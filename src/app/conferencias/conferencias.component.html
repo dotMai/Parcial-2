@@ -1,2 +1,37 @@
-<h1 class=" "display-2 p-3> Conferencias</h1>
-<app-conferencias> </app-conferencias>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conferencias</title>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Starts</th>
+        <th scope="col">Ends</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let conferencia of conferencias; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ conferencia.id }}</td>
+        <td>{{ conferencia.name }}</td>
+        <td>{{ conferencia.starts }}</td>
+        <td>{{ conferencia.ends }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br><br><br>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+</body>
+</html>
